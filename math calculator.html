@@ -1,0 +1,328 @@
+<html>
+    
+    <head>
+        <title>Math Calculator</title>
+        
+        <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="jquery-ui/jquery-ui.js"></script>
+        
+        <style type="text/css">
+            .input {
+                text-align: center;
+            }
+            
+            .small-input {
+                width: 60px;
+            }
+            
+        </style>
+        
+    </head>
+    
+    <body>
+        
+        <div id="accordion">
+            <h3>Pendiente entre dos puntos</h3>
+            <div>
+                <div>
+                    <h2>Punto 1:</h2>
+                    <p>x: <input id="input-1" class="input" type="number"></p>
+                    <p>y: <input id="input-2" class="input" type="number"></p>
+                </div>
+                
+                <div>
+                    <h2>Punto 2:</h2>
+                    <p>x: <input id="input-3" class="input" type="number"></p>
+                    <p>y: <input id="input-4" class="input" type="number"></p>
+                </div>
+                
+                <div>
+                    <p>
+                        <button id="compute-1" class="result-btn">Calcular</button>
+                        <button id="clear-1" class="result-btn">Vaciar campos</button>
+                    </p>
+                </div>
+                
+                <div>
+                    <p id="result-1"></p>
+                </div>
+                
+            </div>
+            
+            <h3>Distancia entre dos puntos</h3>
+            <div>
+                <div>
+                    <h2>Punto 1:</h2>
+                    <p>x: <input id="input-5" class="input" type="number"></p>
+                    <p>y: <input id="input-6" class="input" type="number"></p>
+                </div>
+                
+                <div>
+                    <h2>Punto 2:</h2>
+                    <p>x: <input id="input-7" class="input" type="number"></p>
+                    <p>y: <input id="input-8" class="input" type="number"></p>
+                </div>
+                
+                <div>
+                    <p>
+                        <button id="compute-2" class="result-btn">Calcular</button>
+                        <button id="clear-2">Vaciar campos</button>
+                    </p>
+                </div>  
+                
+                <div>
+                    <p id="result-2"></p>
+                </div>
+                
+            </div>
+            
+            <h3>Punto medio</h3>
+            <div>
+                <div>
+                    <h2>Punto 1:</h2>
+                    <p>x: <input id="input-9" class="input" type="number"></p>
+                    <p>y: <input id="input-10" class="input" type="number"></p>
+                </div>
+                
+                <div>
+                    <h2>Punto 2:</h2>
+                    <p>x: <input id="input-11" class="input" type="number"></p>
+                    <p>y: <input id="input-12" class="input" type="number"></p>
+                </div>
+                
+                <div>
+                    <p>
+                        <button id="compute-3" class="result-btn">Calcular</button>
+                        <button id="clear-3">Vaciar campos</button>
+                    </p>
+                </div>
+                
+                <div>
+                    <p id="result-3"></p>
+                </div>
+                
+            </div>
+            
+            <h3>Distancia de un punto a una recta</h3>
+            <div>
+                <div>
+                    <h2>Punto:</h2>
+                    <p>x: <input id="input-14" class="input" type="number"></p>
+                    <p>y: <input id="input-15" class="input" type="number"></p>
+                </div>
+                
+                <div>
+                    <h2>Recta en la forma: Ax + By + C = 0 </h2>
+                    <p>A: <input id="input-16" class="input" type="number"></p>
+                    <p>B: <input id="input-17" class="input" type="number"></p>
+                    <p>C: <input id="input-18" class="input" type="number"></p>
+                </div>
+                
+                <div>
+                    <p>
+                        <button id="compute-4" class="result-btn">Calcular</button>
+                        <button id="clear-4" class="result-btn">Vaciar campos</button>
+                    </p>
+                </div>
+                
+                <div>
+                    <p id="result-4"></p>
+                </div>
+                
+            </div>
+            
+            <h3>Circunferencia</h3>
+            <div>
+                <div>
+                    <h2>Circunferencia en la forma general:</h2>
+                    <p>D: <input id="input-19" class="input" type="number"></p>
+                    <p>E: <input id="input-20" class="input" type="number"></p>
+                    <p>F: <input id="input-21" class="input" type="number"></p>
+                </div>
+                
+                <div>
+                    <h2>Valores a calcular:</h2>
+                    <p><input id="chbx-radius"type="checkbox" class="input" checked>Radio</p>
+                    <p><input id="chbx-center" type="checkbox" class="input" checked>Centro</p>
+                </div>
+                
+                <div>
+                    <p>
+                        <button id="compute-5" class="result-btn">Calcular</button>
+                        <button id="clear-5" class="result-btn">Vaciar campos</button>
+                    </p>
+                </div>
+                
+                <div>
+                    <p id="result-5"></p>
+                    <p id="result-6"></p>
+                </div>
+                
+            </div>
+            
+            <h3>Identificar ecuaciones de las cónicas</h3>
+            <div>
+                <div>
+                    <h2>Fórmula general de la cónica:</h2>
+                </div>
+                <div>
+                    <p>
+                        <input id="input-22" class="small-input input" placeholder="A" type="number"> x <sup>2</sup> + <input id="input-23" class="small-input input" placeholder="B" type="number"> y <sup>2</sup> + <input id="input-24" class="small-input input" placeholder="D" type="number"> x + <input id="input-25" class="small-input input" placeholder="E" type="number"> y + <input id="input-26" class="small-input input" placeholder="F" type="number"> = 0
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <button id="compute-6">Calcular</button>
+                        <button id="clear-6">Vaciar campos</button>
+                    </p>
+                </div>
+                
+                <div>
+                    <p id="result-7"></p>
+                </div>
+                    
+            </div>
+        </div>
+        <script type="text/javascript">
+            function hasDifferentSing(a,b) {
+                return (a > 0 && b < 0) || (a < 0 && b > 0);
+            }
+            
+            $(function() {
+                $("#accordion").accordion();
+            });
+            
+            $("#clear-1").click(function() {
+                $("#input-1").val("");
+                $("#input-2").val("");
+                $("#input-3").val("");
+                $("#input-4").val("");
+                $("#result-1").text("");
+            });
+            
+            $("#clear-2").click(function() {
+                $("#input-5").val("");
+                $("#input-6").val("");
+                $("#input-7").val("");
+                $("#input-8").val("");
+                $("#result-2").text("");
+            });
+            
+            $("#clear-3").click(function() {
+                $("#input-9").val("");
+                $("#input-10").val("");
+                $("#input-11").val("");
+                $("#input-12").val("");
+                $("#result-3").text("");
+            });
+            
+            $("#clear-4").click(function() {
+                $("#input-14").val("");
+                $("#input-15").val("");
+                $("#input-16").val("");
+                $("#input-17").val("");
+                $("#input-18").val("");
+                $("#result-4").text("");
+            });
+            
+            $("#clear-5").click(function() {
+                $("#input-19").val("");
+                $("#input-20").val("");
+                $("#input-21").val("");
+                $("#result-5").text("");
+                $("#result-6").text("");
+            });
+            
+            $("#clear-6").click(function() {
+                $("#input-22").val("");
+                $("#input-23").val("");
+                $("#input-24").val("");
+                $("#input-25").val("");
+                $("#input-26").val("");
+                $("#result-7").text("");
+            });
+            
+            $("#compute-1").click(function() {
+                var x1 = parseFloat($("#input-1").val());
+                var y1 = parseFloat($("#input-2").val());
+                var x2 = parseFloat($("#input-3").val());
+                var y2 = parseFloat($("#input-4").val());
+                var slope = parseFloat((y2 - y1) / (x2 - x1));
+                if(slope == -Infinity || x1 == x2)
+                    $("#result-1").text("Pendiente indefinida");
+                else
+                    $("#result-1").text("Pendiente: " + slope.toFixed(3));
+            });
+            
+            $("#compute-2").click(function() {
+                var x1 = parseFloat($("#input-5").val());
+                var y1 = parseFloat($("#input-6").val());
+                var x2 = parseFloat($("#input-7").val());
+                var y2 = parseFloat($("#input-8").val());
+                var distance = parseFloat(Math.sqrt((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1)));
+                $("#result-2").text("Distancia: " + distance.toFixed(3));
+            });
+            
+            $("#compute-3").click(function() {
+                var x1 = parseFloat($("#input-9").val());
+                var y1 = parseFloat($("#input-10").val());
+                var x2 = parseFloat($("#input-11").val());
+                var y2 = parseFloat($("#input-12").val());
+                var x = (x1 + x2) / 2;
+                var y = (y1 + y2) / 2;
+                 $("#result-3").text("Punto medio: ("  + x.toFixed(0) + "," + y.toFixed(2) + ")");
+            });
+            
+            $("#compute-4").click(function() {
+                var x = parseFloat($("#input-14").val());
+                var y = parseFloat($("#input-15").val());
+                var A = parseFloat($("#input-16").val());
+                var B = parseFloat($("#input-17").val());
+                var C = parseFloat($("#input-18").val());
+                var distance = Math.abs(A*x + B*y + C) / Math.sqrt(A*A + B*B);
+                $("#result-4").text("Distancia: " + distance.toFixed(3));
+            });
+            
+            $("#compute-5").click(function() {
+                $("#result-5").text("");
+                $("#result-6").text("");
+                var D = parseFloat($("#input-19").val());
+                var E = parseFloat($("#input-20").val());
+                var F = parseFloat($("#input-21").val());
+                if($("#chbx-radius").prop("checked")) {
+                    var r = Math.sqrt(D*D + E*E - 4*F) / 2;
+                    $("#result-5").text("Radio: " + r.toFixed(3));
+                }
+                
+                if($("#chbx-center").prop("checked")) {
+                    var x = -D / 2;
+                    var y = -E / 2;
+                    $("#result-6").text("Centro: (" + x.toFixed(3) + "," + y.toFixed(3) + ")");
+                }
+            });
+            
+            $("#compute-6").click(function() {
+                var A = parseFloat($("#input-22").val());
+                var B = parseFloat($("#input-23").val());
+                var D = parseFloat($("#input-24").val());
+                var E = parseFloat($("#input-25").val());
+                var F = parseFloat($("#input-26").val());
+                if(A == 0 && B == 0)
+                    $("#result-7").text("Recta");
+                else if(A == B)
+                    $("#result-7").text("Circunferencia");
+                else if(A == 0 || B == 0)
+                    $("#result-7").text("Parábola");
+                else if(hasDifferentSing(A,B))
+                    $("#result-7").text("Hipérbola");
+                else 
+                    $("#result-7").text("Elipse");
+                
+            });
+            
+        </script>
+        
+    </body>
+    
+</html>
